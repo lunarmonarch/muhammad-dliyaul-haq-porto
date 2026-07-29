@@ -13,7 +13,7 @@ export const projects = [
 
 export const contact = {
   email: "dliyaoke125@gmail.com",
-  linkedin: "https://www.linkedin.com/in/muhammad-dliya-ul-haq",
+  linkedin: "www.linkedin.com/in/muhammad-dliya-ul-haq-48ba60281",
 };
 
 export const photoProfile = {
