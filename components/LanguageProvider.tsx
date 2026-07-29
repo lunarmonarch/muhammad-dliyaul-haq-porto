@@ -9,10 +9,12 @@ import {
 } from "react";
 import { Locale, translations } from "@/lib/i18n";
 
+type Dictionary = (typeof translations)[Locale];
+
 interface LanguageContextValue {
   locale: Locale;
   toggleLocale: () => void;
-  t: (typeof translations)["id"];
+  t: Dictionary;
 }
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(
