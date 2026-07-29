@@ -6,13 +6,14 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const exists = projects.some((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const exists = projects.some((p) => p.slug === slug);
   if (!exists) return notFound();
 
-  return <ProjectDetailContent slug={params.slug} />;
+  return <ProjectDetailContent slug={slug} />;
 }
