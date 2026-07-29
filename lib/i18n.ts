@@ -1,6 +1,110 @@
 export type Locale = "id" | "en";
 
-export const translations = {
+export interface Dictionary {
+  nav: {
+    about: string;
+    experience: string;
+    projects: string;
+    contact: string;
+  };
+  profile: {
+    role: string;
+    tagline: string;
+  };
+  hero: {
+    badge: string;
+    greeting: string;
+    downloadCv: string;
+    contactMe: string;
+  };
+  skillsHighlight: {
+    heading: string;
+    subtitle: string;
+    items: { title: string; desc: string }[];
+  };
+  experiencePreview: {
+    heading: string;
+    position: string;
+    summary: string;
+    highlights: string[];
+    viewDetail: string;
+  };
+  projectPreview: {
+    heading: string;
+    subtitle: string;
+    comingSoonBadge: string;
+    cardTitle: string;
+    cardDesc: string;
+  };
+  certifications: {
+    heading: string;
+    items: { name: string; issuer: string }[];
+  };
+  cta: {
+    heading: string;
+    subtitle: string;
+    sendEmail: string;
+    downloadCv: string;
+  };
+  footer: {
+    builtWith: string;
+    email: string;
+    linkedin: string;
+  };
+  about: {
+    eyebrow: string;
+    heading: string;
+    narrative: string[];
+    educationHeading: string;
+    major: string;
+    gpaLabel: string;
+    certHeading: string;
+    skillMatrixHeading: string;
+    skillMatrixSubtitle: string;
+    skillTabAll: string;
+  };
+  skillCategories: { title: string; skills: string[] }[];
+  experiencePage: {
+    badge: string;
+    subtitle: string;
+    backToProjects: string;
+    labels: {
+      situation: string;
+      task: string;
+      action: string;
+      result: string;
+    };
+    items: {
+      title: string;
+      situation: string;
+      task: string;
+      action: string;
+      result: string;
+    }[];
+  };
+  projectsPage: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    comingSoonNote: string;
+    backToProjects: string;
+  };
+  contactPage: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    emailLabel: string;
+    sendEmail: string;
+    linkedinLabel: string;
+    linkedinDesc: string;
+    openLinkedin: string;
+    cvHeading: string;
+    cvSubtitle: string;
+    downloadCv: string;
+  };
+}
+
+export const translations: Record<Locale, Dictionary> = {
   id: {
     nav: {
       about: "Tentang",
@@ -388,4 +492,4 @@ export const translations = {
       downloadCv: "Download CV",
     },
   },
-} as const;
+};

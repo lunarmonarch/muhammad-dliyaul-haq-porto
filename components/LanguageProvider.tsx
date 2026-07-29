@@ -7,9 +7,7 @@ import {
   useState,
   ReactNode,
 } from "react";
-import { Locale, translations } from "@/lib/i18n";
-
-type Dictionary = (typeof translations)[Locale];
+import { Locale, Dictionary, translations } from "@/lib/i18n";
 
 interface LanguageContextValue {
   locale: Locale;
